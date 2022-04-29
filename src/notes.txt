@@ -2,8 +2,6 @@ LOTTIEFILES
 https://lottiefiles.com/
 https://github.com/hrupesh/lottieAnimationsRN - lottie with screen scroll
 https://github.com/lottie-react-native/lottie-react-native
-play(30, 120)
-ref={ref} source={source} resizeMode={resizeMode} loop={true} duration={duration} autoPlay={true} onAnimationFinish={onFinish}
 https://github.com/lottie-react-native/lottie-react-native/blob/master/docs/api.md
 https://docs.expo.dev/versions/latest/sdk/lottie/
 https://github.com/HaikuTeam/animator/
