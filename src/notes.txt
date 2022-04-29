@@ -1,0 +1,175 @@
+LOTTIEFILES
+https:lottiefiles.com/
+https:github.com/hrupesh/lottieAnimationsRN - lottie with screen scroll
+https:github.com/lottie-react-native/lottie-react-native
+play(30, 120)
+ref={ref} source={source} resizeMode={resizeMode} loop={true} duration={duration} autoPlay={true} onAnimationFinish={onFinish}
+https:github.com/lottie-react-native/lottie-react-native/blob/master/docs/api.md
+https:docs.expo.dev/versions/latest/sdk/lottie/
+https:github.com/HaikuTeam/animator/
+https:github.com/react-native-web-community/react-native-web-lottie
+https:github.com/lottie-react-native/lottie-react-native
+https:github.com/lottie-react-native/lottie-react-native/blob/master/docs/api.md
+https:github.com/airbnb/lottie-web
+https:codepen.io/collection/nVYWZR/
+================================================================================
+LOTTIE
+play
+stop
+pause
+setSpeed(speed)
+goToAndStop(value, isFrame)
+goToAndPlay(value, isFrame)
+setDirection(direction)
+destroy()
+getDuration(inFrames)
+================================================================================
+TOUCHABLERIPPLE
+import { TouchableRipple } from 'react-native-paper';
+<TouchableRipple style={{borderRadius:5,flex:1,justifyContent:'center'}} rippleColor="rgba(0, 0, 0, .10)" onPress={() => { }}><Text style={{flex:0}}>Text</Text></TouchableRipple>
+================================================================================
+SNACKBAR:
+import { Snackbar } from 'react-native-paper';
+const [visibleSnackBar, setVisibleSnackBar] = React.useState(false); const onToggleSnackBar = () => setVisibleSnackBar(!visibleSnackBar); const onDismissSnackBar = () => setVisibleSnackBar(false); { /*<Text style={[styles.fontsize50, styles.fontlatothin]} onPress={onToggleSnackBar}>{visibleSnackBar ? 'Hide' : 'Show'}</Text><Snackbar visible={visibleSnackBar} onDismiss={onDismissSnackBar} action={{ label: 'Hej', onPress: () => { }, }} style={[styles.snackbar]}><Text>Hej</Text></Snackbar>*/}
+================================================================================
+SCREEN RENDERING
+const [rerender, setRerender] = useState(0); useFocusEffect(React.useCallback(() => {setRerender(Math.random());return () => {null;};},[])); rerender przy wejściu na zakładkę (a nie wyjściu)
+================================================================================
+ICONS
+https:react-icons.github.io/react-icons/icons?name=fi
+================================================================================
+SHOW/HIDE TABBAR
+<Button title={"hide"} onPress={() => this.props.navigation.setParams({tabBarVisible:false})}/>
+================================================================================
+STYLE GLOBALNE UŻYWAJĄC ZEWNĘTRZNEJ BIBLIOTEKI: (ale zrobiłem to context'em)
+import { setCustomImage, setCustomListView, setCustomModal, setCustomPicker, setCustomRefreshControl, setCustomScrollView, setCustomSlider, setCustomStatusBar, setCustomSwitch, setCustomText, setCustomTextInput, setCustomView, setCustomWebView } from 'react-native-global-props';
+setCustomText({style:{fontSize:20}});
+setCustomText({onPress:()=>alert(1)});
+================================================================================
+NAVIGATION PROPS
+gestureEnabled:true, - stack
+gestureDirection: 'horizontal', - stack 
+headerBackTitle: 'back', - stack
+headerBackTitleStyle: null, - stack
+headerBackImageSource: null, - stack
+headerBackVisible: true, - stack 
+position:'absolute',
+bottom:0,
+height:55,
+paddingBottom:10,
+navigation.jumpTo(route.name);
+================================================================================
+{/* search.length ? ( <TouchableOpacity style={styles.closeButtonParent} onPress={() => setSearch("")} > <Text style={styles.searchIcon}>[X]</Text> </TouchableOpacity> ) : ( <Text style={styles.searchIcon}>[O]</Text> )*/}
+================================================================================
+{/*<SafeAreaProvider style={{flex:1,paddingTop:StatusBar.currentHeight}}>*/}
+  <Stations {...props}/>
+{/*</SafeAreaProvider>*/}
+================================================================================
+resizeMode:'contain'
+================================================================================
+if(!search.length && location){ output = []; outputCouter = 0; for (let j = 0; j < Math.min(json.length, 5); j++) { output[outputCouter] = json[j]; outputCouter++; }}
+================================================================================
+if(location) {
+  json[j].distance = distance(json[j].gegrLat, json[j].gegrLon, location.coords.latitude, location.coords.longitude);
+}
+ }
+ if (search.length) {
+   for (let j = 0; j < json.length; j++) {
+     if (cleanup(normalize(json[j].city.name)).indexOf(cleanup(normalize(search))) !== -1) {
+       output[outputCouter] = json[j]; outputCouter++;
+     }
+   }
+ } else { 
+output = json; 
+ }
+ json = output;
+if(location) {
+  json.sort(function (a, b) { return a.distance - b.distance });
+} else {
+}
+json = output;
+================================================================================
+PROMISE RELATED
+async function fetchAsync() {
+	let promise = new Promise((response, reject) => {
+		setTimeout(() => response("Now it's done!"), 1000)
+	});
+	let result = await Promise.all([promise, promise]); 
+	return result;
+}
+async function getAsync() {
+	let result = await fetchAsync(); 
+	console.log(result);
+}
+getAsync();
+================================================================================
+OPENSTREETMAP RELATED
+let url = 'https://jsonplaceholder.typicode.com/users/';
+fullsite: https://www.openstreetmap.org/#map=16/50.0845/20.0000
+jakby nie działało to ewentualnie let url = '//www...' (bez https)
+================================================================================
+MY ANIMATED SVG WAVES
+https://app.adalo.com/apps/cc55f334-6b61-4503-b9bb-e797ae54b495/screens
+https://www.svgviewer.dev/
+https://jakearchibald.github.io/svgomg/
+https://getwaves.io/
+https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths
+<svg width="500" height="100" viewBox="0 0 1000 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill="#0099ffff" d="M 0 0 L 0 100 Q 250 70 500 100 T 1000 100 L 1000 0 Z"/>
+  M 0 0             [kursor w lewym górnym narożniku]
+  L 0 100           [move to position]
+  Q 250 70 500 100  [quadratic: start=0,100 azimuth=250,70, end=500,100]
+  T 1000 100        [continue quadratic with that pattern: end=1000,100]
+  L 1000 0          [line to 1000,0]
+  Z                 [close curve and fill]
+</svg>
+"M -1000 0 L -1000 100 Q -750 85 -500 100 T 0 100 T 500 100 T 1000 100 L 1000 0 Z",
+"M -750 0 L -750 100 Q -500 85 -250 100 T 250 100 T 750 100 T 1250 100 L 1000 0 Z",
+"M -500 0 L -500 100 Q -250 85 0 100 T 500 100 T 1000 100 T 1500 100 L 1000 0 Z",
+"M -250 0 L -250 100 Q 0 85 250 100 T 750 100 T 1250 100 T 1750 100 L 1000 0 Z",
+"M 0 0 L 0 100 Q 250 85 500 100 T 1000 100 T 1500 100 T 2000 100 L 1000 0 Z"
+https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/
+https://lottiefiles.com/plugins/visual-studio-code
+https://ionic.io/ionicons
+//for native {flex:1,flexDirection:"row",borderWidth:5,borderColor:"green"}
+================================================================================
+HEADER RELATED
+//headerShown:false,
+//headerTitle: 'Settings',
+//headerLeft: () => (null),
+//headerRight: () => (null),
+================================================================================
+ASYNCSTORAGE RELATED
+/*
+const performDatabaseRequest = React.useCallback(async () => {
+  AsyncStorage.getItem(STORAGE_KEY)
+  AsyncStorage.setItem(STORAGE_KEY, value)
+  AsyncStorage.mergeItem(STORAGE_KEY, JSON.stringify(value))
+  AsyncStorage.removeItem(STORAGE_KEY)
+  AsyncStorage.getAllKeys()
+  AsyncStorage.clear()
+}
+*/
+================================================================================
+CORS RELATED
+//https://github.com/Freeboard/thingproxy
+//https://www.google.com/search?q=free+cors+x+origin+proxy
+================================================================================
+NAVIGATION RELATED
+<SectionHeader>nagivation</SectionHeader>
+<Pressable style={styles.button} onPress={()=>navigation.navigate('Settings',{screen:'Settings.Home',params:{key:'Settings.Home'}})}><Text style={styles.buttonText}>navigate (Tab4/Stack1/params)</Text></Pressable>
+<Pressable style={styles.button} onPress={()=>props.navigation.push('Settings.Home',{key:'Settings.Home'})}><Text style={styles.buttonText}>push (Settings.Home)</Text></Pressable>
+<Pressable style={styles.button} onPress={()=>props.navigation.pop()}><Text style={styles.buttonText}>pop ()</Text></Pressable>
+<Text style={{color:currentContext.theme.colors.text, fontFamily:currentContext.fonts.light}}>{props?.route?.params?.key? JSON.stringify(props.route.params) : null}</Text>
+================================================================================
+INDICATOR RELATED
+<Text>propsName: {props.name}</Text>
+<Text>quality: {JSON.stringify(quality,null,2)}</Text>
+<Text>qualityTitle: {JSON.stringify(qualityTitle,null,2)}</Text>
+<Text>title: {JSON.stringify(title,null,2)}</Text>
+<Text>color: {JSON.stringify(color,null,2)}</Text>
+<Text>percentage: {JSON.stringify(percentage,null,2)}</Text>
+<Text>lastMeasurementValue: {lastMeasurement.value}</Text>
+<Text>lastMeasurementDate: {lastMeasurement.date}</Text>
+<Text>props: {JSON.stringify(props,null,2)}</Text>
+<Text>sensorsMeasurements: {JSON.stringify(sensorsMeasurements.slice(0,3),null,2)}</Text>
