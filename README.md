@@ -1,5 +1,5 @@
 # react-native-airqualityinpoland
-> This is my first project in react native used to monitor air quality in Poland using state system of sensors exposed via REST API [https://powietrze.gios.gov.pl/pjp/content/api](https://powietrze.gios.gov.pl/pjp/content/api).
+> This is my first project in react native, dedicated to monitoring air quality in Poland using state system of sensors exposed via REST API [https://powietrze.gios.gov.pl/pjp/content/api](https://powietrze.gios.gov.pl/pjp/content/api).
 
 ## Table of Contents
 * [Demo](#demo)
