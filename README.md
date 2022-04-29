@@ -32,4 +32,4 @@ Room for improvement:
 | ![Example screenshot](./screenshots/Screenshot1.jpg) | ![Example screenshot](./screenshots/Screenshot2.jpg) | ![Example screenshot](./screenshots/Screenshot3.jpg) | ![Example screenshot](./screenshots/Screenshot4.jpg) |
 
 ## Contact
-In case of any questions please feel free to contact me: krzysztof.wesolowski(PUT_HERE_AT_SIGN)pk.edu.pl
+In case of any questions please feel free to contact me: krzysztof.wesolowski(HERE_PUT_THE_AT_SIGN)pk.edu.pl
