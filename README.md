@@ -31,9 +31,9 @@ Room for improvement:
 - creating maps with multiple stations and with color scales
 
 ## Screenshots
-| List of stations | Settings | Details of station | Details of station |
+| List of stations | Details of station | Details of station | Settings |
 | --- | --- | --- | --- |
-| ![Example screenshot](./screenshots/Screenshot1.jpg) | ![Example screenshot](./screenshots/Screenshot2.jpg) | ![Example screenshot](./screenshots/Screenshot3.jpg) | ![Example screenshot](./screenshots/Screenshot4.jpg) |
+| ![Example screenshot](./screenshots/Screenshot1.jpg) | ![Example screenshot](./screenshots/Screenshot3.jpg) | ![Example screenshot](./screenshots/Screenshot4.jpg) | ![Example screenshot](./screenshots/Screenshot2.jpg) |
 
 ## Contact
 In case of any questions please feel free to contact me: krzysztof.wesolowski(HERE_PUT_THE_AT_SIGN)pk.edu.pl
