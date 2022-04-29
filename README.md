@@ -21,6 +21,7 @@ Project is: _in progress_ .
 
 ## Room for Improvement
 Room for improvement:
+- reorganizing of the code to bring more tidiness and clarity
 - using other sensor providers, not only state governed
 - incorporating Google Maps API
 - creating maps with multiple stations and with color scales
