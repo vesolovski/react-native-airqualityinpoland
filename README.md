@@ -1,13 +1,16 @@
 # react-native-airqualityinpoland
 > This is my first project in react native used to monitor air quality in Poland using state system of sensors exposed via REST API [https://powietrze.gios.gov.pl/pjp/content/api](https://powietrze.gios.gov.pl/pjp/content/api).
-> You may want to see the live demo of the app working here [https://snack.expo.dev/@vesolovski/react-native-airqualityinpoland](https://snack.expo.dev/@vesolovski/react-native-airqualityinpoland).
 
 ## Table of Contents
+* [Demo](#demo)
 * [Features](#features)
 * [Project Status](#project-status)
 * [Room for Improvement](#room-for-improvement)
 * [Screenshots](#screenshots)
 * [Contact](#contact)
+
+## Demo
+You may want to see the live demo of the app on snack.expo here: [https://snack.expo.dev/@vesolovski/react-native-airqualityinpoland](https://snack.expo.dev/@vesolovski/react-native-airqualityinpoland).
 
 ## Features
 List of features:
