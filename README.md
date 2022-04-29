@@ -12,6 +12,7 @@
 ## Features
 List of features:
 - fetching data from REST API
+- using AsynStorage to have the not-too-frequently-changing data cached instead of having to every time fetch the api
 - using openstreetmap for map layer
 - using lottiefiles for tab animations
 - using themes provided by '@react-navigation/native' library
